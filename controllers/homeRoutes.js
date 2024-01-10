@@ -46,4 +46,25 @@ router.get("/post/:id", async (req, res) => {
   }
 });
 
+// GET login route
+router.get("/login", (req, res) => {
+  // if logged in, redirect to homepage, else, render the login page
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+  res.render("login");
+});
+
+// GET signup route
+router.get("/signup", (req, res) => {
+  // if logged in, redirect to homepage, else render signup page
+  if (req.session.loggedIn) {
+    res.redirect("/");
+    return;
+  }
+
+  res.render("signup");
+});
+
 module.exports = router;
