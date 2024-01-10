@@ -20,6 +20,30 @@ router.get("/", async (req, res) => {
   }
 });
 
-
+// GET single post by id /post/:id
+router.get("/post/:id", async (req, res) => {
+  try {
+    const postData = await Post.findByPk(req.params.id, {
+      include: [
+        User,
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
+    if (postData) {
+      const post = postData.get({ plain: true });
+      // render on singlePost view
+      res.render("onePost", {
+        post,
+      });
+    } else {
+      res.status(404).end();
+    }
+  } catch (error) {
+    res.status(500).json(err);
+  }
+});
 
 module.exports = router;
