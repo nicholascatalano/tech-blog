@@ -1,4 +1,20 @@
 <div class="posts">
-  <h1>Home page here</h1>
-  {{#each posts}}{{/each}}
+  {{#each posts}}
+    <article class="card">
+      <div class="card-header flex-row justify-space-between">
+        <h2>
+          <a href="/post/{{id}}">{{title}}</a>
+        </h2>
+        <div>
+          Posted by:
+          {{User.username}}
+          on
+          {{format_date createdAt}}
+        </div>
+      </div>
+      <div class="card-body">
+        {{body}}
+      </div>
+    </article>
+  {{/each}}
 </div>
