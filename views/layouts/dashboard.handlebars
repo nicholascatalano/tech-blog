@@ -1,0 +1,41 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tech Blog</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <nav>
+      <ul>
+        {{! link to homepage }}
+        <li class="li-inline nav-item"><a href="/">Home</a></li>
+        {{#if logged_in}}
+          {{! if user is logged in, links to the dashboard & logout will show }}
+          <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
+          <li class="li-inline nav-item"><a
+              href="#"
+              class="btn"
+              id="logout"
+            >Logout</a></li>
+        {{else}}
+          {{! if user not logged in, login + login link will show }}
+          <li class="li-inline nav-item"><a href="/login">Login</a></li>
+        {{/if}}
+      </ul>
+      <header class="display-flex justify-space-between align-center p-2">
+        <h1>
+          Tech Blog
+        </h1>
+      </header>
+
+      <main>
+        {{{body}}}
+      </main>
+
+      <footer>
+
+      </footer>
+    </nav>
+  </body>
+</html>
