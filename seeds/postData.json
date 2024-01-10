@@ -1,0 +1,17 @@
+[
+  {
+    "title": "How to Build a REST API",
+    "body": "In this tutorial, we will walk through how to build a REST API using Node.js and Express.",
+    "username": "Lernatino"
+  },
+  {
+    "title": "Intro to Computer Science",
+    "body": "I'm going to explain the basics of Computer Science in this post.",
+    "username": "Sal"
+  },
+  {
+    "title": "Why you should install the prettier extension",
+    "body": "In this post, I'm going to go through all the reasons why prettier is the most important VS Code extension to install",
+    "username": "Amiko"
+  }
+]
