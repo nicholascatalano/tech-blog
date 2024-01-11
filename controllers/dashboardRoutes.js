@@ -17,7 +17,7 @@ router.get("/", withAuth, async (req, res) => {
         plain: true,
       })
     );
-    res.render("allPostsAdmin", { layout: "dashboard", posts });
+    res.render("userDashboard", { layout: "dashboard", posts });
   } catch (err) {
     // if withAuth fails or user has no posts, redirect to login
     res.redirect("login");

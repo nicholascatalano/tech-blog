@@ -3,14 +3,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
-    <link rel="stylesheet" href="./css/style.css" />
+    {{! <link rel="stylesheet" href="./css/style.css" /> }}
   </head>
   <body>
     <nav>
       <ul>
         {{! link to homepage }}
         <li class="li-inline nav-item"><a href="/">Home</a></li>
-        {{#if logged_in}}
+        {{#if loggedIn}}
           {{! if user is logged in, links to the dashboard & logout will show }}
           <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
           <li class="li-inline nav-item"><a
@@ -34,10 +34,9 @@
       </main>
 
       <footer>
-
+        <a href="/dashboard/new">Create New Post</a>
       </footer>
     </nav>
   </body>
 </html>
-
-<script src="/public/js/logout.js"></script>
+<script src="/js/login.js"></script>

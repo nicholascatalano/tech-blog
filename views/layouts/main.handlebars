@@ -3,14 +3,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tech Blog</title>
-    <link rel="stylesheet" href="/stylesheets/style.css" />
+    {{! <link rel="stylesheet" href="/stylesheets/style.css" /> }}
   </head>
   <body>
 
     <nav>
       <ul>
         <li class="li-inline nav-item"><a href="/">Home</a></li>
-        {{#if logged_in}}
+        {{#if loggedIn}}
           <li class="li-inline nav-item"><a href="/dashboard">Dashboard</a></li>
           <li class="li-inline nav-item"><a
               href="#"
@@ -38,5 +38,4 @@
 
   </body>
 </html>
-
-<script src="/public/js/logout.js"></script>
+<script src="/js/login.js"></script>
