@@ -13,9 +13,11 @@ const logout = async () => {
 };
 
 // checks if the logout button is on the page
-document.addEventListener("DOMContentLoaded", () => {
-  const logoutBtn = document.querySelector("#logout");
-  if (logoutBtn) {
-    logoutBtn.addEventListener("click", logout);
-  }
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   const logoutBtn = document.querySelector("#logout");
+//   if (logoutBtn) {
+//     logoutBtn.addEventListener("click", logout);
+//   }
+// });
+
+document.querySelector("#logout").addEventListener("click", logout);
